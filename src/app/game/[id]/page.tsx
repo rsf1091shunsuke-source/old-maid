@@ -47,7 +47,7 @@ export default function GamePage() {
     const newMyHand = removePairs([...myPlayer.hand, actualCard]);
     const newOpponentHand = opponent.hand.filter((_, i) => i !== index);
 
-    let newStatus = game.status;
+    let newStatus: 'waiting' | 'playing' | 'finished' = game.status;
     let winner = game.winner;
 
     if (newMyHand.length === 0) { newStatus = 'finished'; winner = myId; }
