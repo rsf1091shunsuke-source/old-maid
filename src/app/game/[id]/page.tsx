@@ -19,4 +19,11 @@ const drawCard = async (index: number) => {
 
   await updateDoc(doc(db, 'oldMaidGames', id), {
     [`players.${myId}.hand`]: newMyHand,
-    [`players.${opponentId}.hand`]: newOpponentHand
+    [`players.${opponentId}.hand`]: newOpponentHand,
+    currentTurn: opponentId,
+    status: newStatus,
+    winner,
+  });
+  setSelected(null);
+  setMessage('');
+};
