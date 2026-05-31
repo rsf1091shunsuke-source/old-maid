@@ -47,8 +47,7 @@ export default function GamePage() {
     const actualCard = opponent.hand[index];
     const newMyHandBeforePair = [...myPlayer.hand, actualCard];
     const newMyHand = removePairs(newMyHandBeforePair);
-    const newOpponentHand = opponent.hand.filter((_, i) => i !== index);
-
+    const newOpponentHand = shuffle(opponent.hand.filter((_, i) => i !== index));
     setMessage(`引いたカード：${getCardLabel(actualCard)}`);
     await new Promise(resolve => setTimeout(resolve, 1500));
 
