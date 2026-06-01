@@ -71,7 +71,7 @@ export default function Home() {
   };
 
   const s = {
-    container: { minHeight: '100dvh', display: 'flex', flexDirection: 'column' as const, alignItems: 'center', justifyContent: 'center', padding: 24, gap: 32 },
+    container: { height: '100dvh', overflowY: 'auto' as const, display: 'flex', flexDirection: 'column' as const, alignItems: 'center', justifyContent: 'center', padding: 24, gap: 32 },
     title: { fontSize: 36, fontWeight: 900, textAlign: 'center' as const },
     card: { background: '#16213e', borderRadius: 16, padding: 24, width: '100%', maxWidth: 360, display: 'flex', flexDirection: 'column' as const, gap: 12 },
     input: { padding: '12px 16px', borderRadius: 10, border: '1px solid rgba(255,255,255,0.2)', background: '#0f3460', color: '#fff', fontSize: 16, outline: 'none', width: '100%' },
